@@ -1,0 +1,17 @@
+.navbar {
+    grid-area: n;
+    background-color: lightgreen;
+}
+.item a {
+    margin: 20px;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+.item a:active {
+    color: gold;
+}
+.active a {
+    color: gold;
+}
+
