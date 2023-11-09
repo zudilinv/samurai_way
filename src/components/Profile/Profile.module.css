@@ -1,9 +1,3 @@
-.profile {
-    grid-area: p;
-    height: 350px;
-    background-color: yellow;
-}
-
 .profile img {
     width: 100%;
     height: 150px;
