@@ -1,3 +1,29 @@
 .dialogs {
-    font-size: 40px;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    font-size: 24px;
 }
+
+.dialogsItems {
+    padding: 10px;
+}
+
+.dialog {
+}
+
+.dialog a {
+    text-decoration: none;
+}
+
+.dialog a.active {
+    color: lawngreen;
+}
+
+.messagesItems {
+    padding: 10px;
+}
+
+.message {
+
+}
+
