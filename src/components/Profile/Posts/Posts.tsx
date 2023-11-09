@@ -39,18 +39,14 @@ export const Posts = (props: PostsType) => {
 
     return (
         <div className={s.posts}>
-           <div className={s.postsItem}>
-               <div>My posts</div>
-               <div>
+            <div>My posts</div>
+            <div>
                 <textarea value={title}
                           onChange={onChangeHandler}
                           onKeyDown={onKeyBoardHandler}
                 ></textarea>
-               </div>
-               <div>
-                   <button onClick={onClickHandler}>Add Post</button>
-               </div>
-           </div>
+                <button onClick={onClickHandler}>Add Post</button>
+            </div>
             <MyPost messages={messages} addLikes={addLikes}/>
         </div>
     );
