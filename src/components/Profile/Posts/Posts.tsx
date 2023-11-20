@@ -2,18 +2,15 @@ import React, {ChangeEvent, KeyboardEvent, useState} from "react";
 import {MyPost} from "./MyPost/MyPost";
 import s from "./Posts.module.css"
 import {v1} from "uuid"
+import {PostsType} from "../../../Redux/state";
 
-type PostsType = {}
-export type MessagesType = {
-    id: string
-    message: string
-    like: number
+
+type PostsPropsType = {
+    posts: PostsType[]
 }
-export const Posts = (props: PostsType) => {
-    const [messages, setMessages] = useState<MessagesType[]>([
-        {id: v1(), message: "Yooo, it is my first post too", like: 0},
-        {id: v1(), message: "Hi, it is my first post", like: 0},
-    ])
+
+export const Posts = (props: PostsPropsType) => {
+    const [messages, setMessages] = useState<PostsType[]>(props.posts)
     const [title, setTitle] = useState("")
 
 

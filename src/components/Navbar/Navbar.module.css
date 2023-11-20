@@ -2,14 +2,33 @@
     grid-area: n;
     background-color: lightgreen;
 }
+.item {
+    display: flex;
+}
 .item a {
     font-size: 24px;
     color: white;
     text-decoration: none;
-    padding: 20px;
+    padding: 5px;
+    margin-left: 5px;
 }
 .item a.active {
     color: gold;
 }
 
+.siteBar {
+    font-size: 34px;
+    color: white;
+    margin: 10px 5px;
+}
+.itemBar {
+    height: 100px;
+    width: 40px;
+}
+.spanItemBar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: gold;
+}
 

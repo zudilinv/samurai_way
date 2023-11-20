@@ -1,0 +1,23 @@
+
+.sidebar {
+    font-size: 34px;
+    color: white;
+    margin: 10px 15px;
+}
+
+.itemBar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.spanItemBar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: gold;
+}
+.friends {
+    font-size: 14px;
+    color: orange;
+}
+

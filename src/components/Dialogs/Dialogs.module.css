@@ -1,6 +1,6 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 2fr 4fr 4fr;
     font-size: 24px;
 }
 
@@ -26,4 +26,11 @@
 .message {
 
 }
-
+.names {
+display: flex;
+}
+.names img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
