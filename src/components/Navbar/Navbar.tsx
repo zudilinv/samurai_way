@@ -6,7 +6,7 @@ import {SidebarType} from "../../Redux/state";
 
 
 type NavbarPropsType = {
-    sidebarPage: SidebarType
+    sidebar: SidebarType
 }
 export const Navbar = (props: NavbarPropsType) => {
     return (
@@ -16,7 +16,7 @@ export const Navbar = (props: NavbarPropsType) => {
                 <div className={s.item}><NavLink to={"/music"} activeClassName={s.active}>Music</NavLink></div>
                 <div className={s.item}><NavLink to={"/news"} activeClassName={s.active}>News</NavLink></div>
                 <div className={s.item}><a href={"/settings"}>Settings</a></div>
-               <Sidebar sidebarPage={props.sidebarPage}/>
+               <Sidebar sidebar={props.sidebar}/>
             </nav>
     );
 

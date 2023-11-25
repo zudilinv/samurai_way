@@ -4,11 +4,12 @@ import {DialogMessageType} from "../../../Redux/state";
 
 
 type MessageItemType = {
-messages: DialogMessageType[]
+    messages: DialogMessageType[]
 }
 export const MessageItem = (props: MessageItemType) => {
 
-    const messagesItemList = props.messages.map(m=> {
+
+    const messagesItemList = props.messages.map(m => {
         return (
             <div key={m.id}
                  className={s.message}

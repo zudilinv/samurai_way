@@ -6,11 +6,11 @@ export type PostsType = {
     like: number
 }
 export type UsersType = {
-    id: number
+    id: string
     name: string
 }
 export type DialogMessageType = {
-    id: number
+    id: string
     message: string
 }
 export type DialogsType = {
@@ -21,39 +21,47 @@ export type ProfileType = {
     posts: PostsType[]
 }
 export type SidebarType = {
-   friends: UsersType[]
+    friends: UsersType[]
 }
 
 export type StateType = {
     dialogsPage: DialogsType
     profilePage: ProfileType
-    sidebarPage: SidebarType
+    sidebar: SidebarType
 }
 
 export let state: StateType = {
     dialogsPage: {
         dialogsMessages: [
-            {id: 1, message: "Hi, how are you?"},
-            {id: 2, message: "Yoo, yoo, hello everyone"},
-            {id: 3, message: " Hello, hello, hello!"},
+            {id: v1(), message: "Hi, how are you?"},
+            {id: v1(), message: "Yoo, yoo, hello everyone"},
+            {id: v1(), message: " Hello, hello, hello!"},
         ],
         users: [
-            {id: 1, name: "Dimych"},
-            {id: 2, name: "Andrew"},
-            {id: 3, name: "Victor"},
+            {id: v1(), name: "Dimych"},
+            {id: v1(), name: "Andrew"},
+            {id: v1(), name: "Victor"},
         ],
     },
     profilePage: {
         posts: [
-            {id: v1(), message: "Yooo, it is my first post too", like: 0},
-            {id: v1(), message: "Hi, it is my first post", like: 0},
+            {id: v1(), message: "Yooo, it is my first post too", like: 5},
+            {id: v1(), message: "Hi, it is my first post", like: 10},
         ]
     },
-    sidebarPage: {
+    sidebar: {
         friends: [
-    {id: 1, name: "Sasha"},
-    {id: 2, name: "Sergey"},
-    {id: 3, name: "Sveta"},
-],
+            {id: v1(), name: "Sasha"},
+            {id: v1(), name: "Sergey"},
+            {id: v1(), name: "Sveta"},
+        ],
     }
+}
+export const addMessage = (title: string) => {
+    const newMessage = {id: v1(), message: title}
+    state.dialogsPage.dialogsMessages.unshift(newMessage)
+}
+export const addPost = (title: string) => {
+    const newMessage = {id: v1(), message: title, like: 0}
+    state.profilePage.posts.unshift(newMessage)
 }
